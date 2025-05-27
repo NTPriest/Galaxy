@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Goals – NTPriest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CorpyStyle.css">
+  <script src="Javascript2.js"></script>
+</head>
+
+<body>
+
+  <aside>
+    <h1>NTPriest.Galax</h1>
+    <nav>
+      <a href="main.html">Home</a>
+      <a href="https://github.com/NTPriest" target="_blank">Repositories</a>
+      <div class="dropdown">
+        <div class="dropbtn" onclick="toggleDropdown()">Network Tools ▼</div>
+        <div class="dropdown-content-panel" id="dropdownContent">
+          <div class="dropdown-section">
+            <span class="categories"><b>Calculators:~</b></span>
+            <a href="ipcalc2.html">IP Calculator</a>
+            <a href="LGC2.html">Lag & Jitter</a>
+            <a href="download2.html">Download Time Estimator - ETA</a>
+          </div>
+          <div class="dropdown-section">
+            <span class="categories">Connectivity:~</span>
+            <a href="RQL2.html">Reverse Square Law</a>
+          </div>
+          <div class="dropdown-section">
+            <span class="categories">Cybersecurity:~</span>
+            <a href="passtreng2.html">Password Strength</a>
+          </div>
+        </div>
+      </div>
+      <a href="contact2.html">Contact</a>
+      <a href="about2.html">About</a>
+      <a class="active" href="goals2.html">Goals</a>
+    </nav>
+  </aside>
+
+  <main>
+    <h2 class="section-title">Goals & Roadmap</h2>
+    <p class="emph">This is my personal tracking space. Projects, certs, ideas. Iterating constantly.</p>
+
+    <div class="grid">
+      <!-- Sanctu_Net -->
+      <div class="card">
+        <h3><span class="emph">Sanctu_Net [ ]</span> – PoC</h3>
+        <p>A Decentralized, Privacy-oriented homelab mesh. Relays, rotating routing (CarouselSW), and blockchain-based node auth.</p>
+        <ul>
+          <li>Clients vs Czars (relays)</li>
+          <li>Manual routing + Matrix/IRC for ops</li>
+          <li>Tor integration & failover w/ ICMP</li>
+          <li>OpenVPN/WireGuard, Bash/Python</li>
+          <li>5-year PoC → ethical + sovereign net</li>
+        </ul>
+      </div>
+
+      <!-- Network+ -->
+      <div class="card">
+        <h3><span class="emph">CompTIA Network+ N10-009 [&check;]</span></h3>
+        <p>Passed on 22.05.2025 – score: <strong>794/900</strong></p>
+        <p>Badge acquired. 📛</p>
+      </div>
+
+      <!-- Security+ -->
+      <div class="card">
+        <h3><span class="emph">CompTIA Security+ [ ]</span></h3>
+        <p>Another goal on the horizon. Deepening the cybersecurity layer.</p>
+      </div>
+
+      <!-- CCNA -->
+      <div class="card">
+        <h3><span class="emph">CCNA [ ]</span></h3>
+        <p>To be pursued after Security+. Completing the network knowledge arc.</p>
+      </div>
+    </div>
+
+    <footer>
+      © <span id="year"></span> NTPriest. All rights reserved. Visit <a href="https://github.com/NTPriest" target="_blank">GitHub</a>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

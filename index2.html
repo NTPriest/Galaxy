@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NTPriest – Tech Space</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CorpyStyle.css">
+  <script src="Javascript2.js"></script>
+</head>
+
+<body>
+
+  <aside>
+    <h1>NTPriest.Galax</h1>
+    <nav>
+      <a href="index2.html">Home</a>
+      <a href="https://github.com/NTPriest" target="_blank">Repositories</a>
+      <div class="dropdown">
+      <div class="dropbtn" onclick="toggleDropdown()">Network Tools ▼</div>
+      <div class="dropdown-content-panel" id="dropdownContent">
+        <div class="dropdown-section">
+          <span class="categories"><b>Calculators:~</b></span>
+          <a href="ipcalc2.html">IP Calculator</a>
+          <a href="LGC2.html">Lag & Jitter</a>
+          <a href="download2.html">Download Time Estimator - ETA</a>
+        </div>
+        <div class="dropdown-section">
+          <span class="categories">Connectivity:~</span>
+          <a href="RQL2.html">Reverse Square Law</a>
+        </div>
+        <div class="dropdown-section">
+          <span class="categories">Cybersecurity:~</span>
+          <a href="passtreng2.html">Password Strength</a>
+        </div>
+      </div>
+    </div>
+      <a href="contact2.html">Contact</a>
+      <a href="about2.html">About</a>
+      <a href="goals2.html">Goals</a>
+    </nav>
+  </aside>
+
+  <main>
+    <h2 class="section-title">Welcome to My Space</h2>
+    <p style="margin-bottom: 2rem;">Welcome to a place where aesthetics meet technology, built with pure CSS and ideas in progress.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>About the Project</h2>
+        <p>This dashboard is mostly built with pure CSS, with little to no JavaScript involved. It’s a creative and visual space that will grow over time with new tools and concepts.</p>
+        <p>Read more on the <a href="about.html">About</a> page.</p>
+      </div>
+
+      <div class="card">
+        <h2>Purpose</h2>
+        <p>The goal is to keep learning, share the journey, and help others grow along the way. It’s about improving myself and (hopefully) inspiring someone else to do the same.</p>
+        <p>Learn more on the <a href="goals.html">Goals</a> page.</p>
+      </div>
+
+      <div class="card">
+        <h2>What the...ADS?!</h2>
+        <p>Yep, those ads are here to keep this site running. They help me improve and add cool stuff — without charging you anything. And c’mon... it’s 2025.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 2rem;" class="emph">Still working on this site — don’t be surprised if a few links don’t work yet!</p>
+
+    <footer>
+      © <span id="year"></span> NTPriest. All rights reserved. Visit <a href="https://github.com/NTPriest" target="_blank">GitHub</a>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

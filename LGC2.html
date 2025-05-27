@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lag & Jitter – NTPriest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CorpyStyle.css">
+  <script src="Javascript2.js"></script>
+</head>
+
+<body>
+  <aside>
+    <h1>NTPriest.Galax</h1>
+    <nav>
+      <a href="index2.html">Home</a>
+      <a href="https://github.com/NTPriest" target="_blank">Repositories</a>
+      <div class="dropdown">
+        <div class="dropbtn" onclick="toggleDropdown()">Network Tools ▼</div>
+        <div class="dropdown-content-panel" id="dropdownContent">
+          <div class="dropdown-section">
+            <span class="categories"><b>Calculators:~</b></span>
+            <a href="ipcalc2.html">IP Calculator</a>
+            <a class="active" href="LGC2.html">Lag & Jitter</a>
+            <a href="download2.html">Download ETA</a>
+          </div>
+          <div class="dropdown-section">
+            <span class="categories">Connectivity:~</span>
+            <a href="RQL2.html">Reverse Square Law</a>
+          </div>
+          <div class="dropdown-section">
+            <span class="categories">Cybersecurity:~</span>
+            <a href="passtreng2.html">Password Strength</a>
+          </div>
+        </div>
+      </div>
+      <a href="contact2.html">Contact</a>
+      <a href="about2.html">About</a>
+      <a href="goals2.html">Goals</a>
+    </nav>
+  </aside>
+
+  <main>
+    <h2 class="section-title">Lag & Jitter</h2>
+    <p class="emph">Input samples (ms) to measure latency variance.</p>
+
+    <div class="card-ip">
+      <label for="lagInput">Lag samples (ms):</label>
+      <input type="text" id="lagInput" placeholder="e.g. 40,42,41,39,45">
+      <button onclick="calculateLagJitter()">Calculate</button>
+      <pre id="lagOutput"></pre>
+    </div>
+
+    <footer>
+      © <span id="year"></span> NTPriest. All rights reserved. Visit <a href="https://github.com/NTPriest" target="_blank">GitHub</a>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – NTPriest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CorpyStyle.css" />
+  <script src="Javascript2.js"></script>
+</head>
+
+<body>
+  <aside>
+    <h1>NTPriest.Galax</h1>
+    <nav>
+      <a href="index2.html">Home</a>
+      <a href="https://github.com/NTPriest" target="_blank">Repositories</a>
+      <div class="dropdown">
+        <div class="dropbtn" onclick="toggleDropdown()">Network Tools ▼</div>
+        <div class="dropdown-content-panel" id="dropdownContent">
+          <div class="dropdown-section">
+            <span class="categories"><b>Calculators:~</b></span>
+            <a href="ipcalc2.html">IP Calculator</a>
+            <a href="LGC2.html">Lag & Jitter</a>
+            <a href="download2.html">Download ETA</a>
+          </div>
+          <div class="dropdown-section">
+            <span class="categories">Connectivity:~</span>
+            <a href="RQL2.html">Reverse Square Law</a>
+          </div>
+          <div class="dropdown-section">
+            <span class="categories">Cybersecurity:~</span>
+            <a href="passtreng2.html">Password Strength</a>
+          </div>
+        </div>
+      </div>
+      <a href="contact2.html">Contact</a>
+      <a class="active" href="about2.html">About</a>
+      <a href="goals2.html">Goals</a>
+    </nav>
+  </aside>
+
+  <main>
+    <h2 class="section-title">About</h2>
+    <p class="emph">~everything~</p>
+
+    <section class="card-ip">
+      <h2>- <span class="emph">This isn't just a website</span> — it's a little galaxy -</h2><br>
+
+      <p>
+        <span class="emph">I’m building</span>, one page, one tool, one idea at a time.
+        It's a place for <span class="emph">learning</span>, <span class="emph">tinkering</span>,
+        <span class="emph">sharing</span>, and <span class="emph">growing</span> — for both myself and hopefully anyone who stumbles in.
+      </p>
+
+      <p>
+        I’ve been around tech for years, working in IT, fixing things, exploring systems.
+        But it wasn’t until recently that I realized what I really wanted to do:
+      </p><br>
+
+      <h3>- <span class="emph">build something lasting</span> -</h3>
+      <h3>- <span class="emph">something useful</span> -</h3>
+      <h3>- <span class="emph">aesthetic</span> -</h3>
+      <h3>- <span class="emph">and open</span> -</h3>
+
+      <p>
+        Something that feels like it <span class="emph">belongs to the web of the past</span>,
+        but with the soul of now.
+      </p>
+
+      <p>
+        Whether you're here out of curiosity, need a quick tool,
+        or just enjoy the DIY vibe — <span class="emph">welcome</span>.
+        This space is for you.
+        And yeah, I know the world can be a mess, but maybe this little corner can be something good.
+        Something <span class="emph">helpful</span>. Something <span class="emph">real</span>.
+      </p>
+
+      <p>
+        No flashy frameworks, no corporate polish.
+        Just <span class="emph">hand-built pages</span>, <span class="emph">heart-coded</span>.
+        Static for now — because <span class="emph">simplicity is security</span> — but always growing.
+        <br><br>One day I might move to a full backend, with a CMS and even deeper tools
+        (<i>nmap online, nslookup, ping, whois</i> etc.).
+      </p>
+
+      <p>
+        I don't expect to change the world. But if this site makes your day easier, teaches you something new,
+        or inspires you to build something of your own — then <span class="emph">it's done its job</span>.
+      </p>
+
+      <p>
+        You're in <span class="emph">my galaxy</span> now. <span class="emph">Stay a while</span>.
+      </p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> NTPriest. All rights reserved. Visit <a href="https://github.com/NTPriest" target="_blank">GitHub</a>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

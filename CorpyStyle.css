@@ -1,0 +1,336 @@
+:root {
+      --bg: #0d1117;
+      --sidebar: #161b22;
+      --card: #1c2128;
+      --text: #f0f6fc;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+    
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    min-height: 100vh;
+}
+
+aside {
+    background-color: var(--sidebar);
+    width: 240px;
+    padding: 2rem 1rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+aside h1 {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    }
+
+aside nav a {
+    display: block;
+    color: var(--muted);
+    margin: 0.5rem 0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+aside nav a:hover {
+    color: var(--text);
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--card);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    color: var(--accent);
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #c9d1d9;
+}
+
+.emph {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 4rem;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.dropdown {
+  margin: 1rem 0;
+}
+
+.dropbtn {
+  cursor: pointer;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 0.3rem 0;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.dropbtn:hover {
+  color: var(--text);
+}
+
+.dropdown-content-panel {
+  display: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  border-left: 2px solid var(--accent);
+}
+
+.dropdown-content-panel a {
+  display: block;
+  margin: 0.3rem 0;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.dropdown-content-panel a:hover {
+  color: var(--accent);
+}
+
+.categories {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-top: 0.7rem;
+}
+
+/* Style specific to goals.html structure */
+
+#goal-section {
+  margin-top: 2rem;
+}
+
+.info-box-goals {
+  background-color: var(--card);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: 0.3s;
+}
+
+.info-box-goals:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.info-box-goals h3 {
+  color: var(--accent);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.info-box-goals p {
+  font-size: 0.95rem;
+  color: #c9d1d9;
+  line-height: 1.5;
+}
+
+/* Optional sub-headings in boxes */
+.info-box-goals h4 {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-top: 1rem;
+}
+
+/* For any lists inside */
+.info-box-goals ul {
+  list-style-type: disc;
+  margin-left: 1.2rem;
+  color: var(--text);
+}
+
+.info-box-goals li {
+  margin: 0.3rem 0;
+}
+
+/* If there's a separate goal grid like in other sections */
+.goal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* ==== RQL2 - Inverse Square Law Page Styles ==== */
+
+#rql2-main {
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.calc-container-rql2 {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  background-color: #121212;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.calc-container-rql2 label {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.calc-container-rql2 input {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 0.6rem;
+  border-radius: 5px;
+}
+
+.calc-container-rql2 button {
+  background-color: #00cccc;
+  color: #000;
+  border: none;
+  padding: 0.8rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calc-container-rql2 button:hover {
+  background-color: #009999;
+}
+
+#inverseOutput {
+  color: #00ff99;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+/* IP Calculator Styles */
+.grid-ip {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 2rem;
+}
+
+.card-ip {
+  background: #0f1117;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+  border: 1px solid #3a3a3a;
+}
+
+.card-ip h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #b6f0ff;
+}
+
+.card-ip label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.card-ip input {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.5rem;
+  background: #1a1d23;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.card-ip button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #3dd9a4;
+  border: none;
+  border-radius: 0.5rem;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card-ip pre {
+  background: #1e212a;
+  color: #c5f8ff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+/* Lag & Jitter Enhancements (Optional) */
+.card-ip input[type="text"] {
+  font-family: monospace;
+}
+
+.contact_inline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.icons{
+    height: 5rem;
+}
