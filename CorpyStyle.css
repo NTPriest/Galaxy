@@ -334,3 +334,7 @@ a:hover {
 .icons{
     height: 5rem;
 }
+
+.greencheck{
+  color: rgb(10, 165, 10);
+}

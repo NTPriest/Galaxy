@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NTPriest – Tech Space</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CorpyStyle.css">
+  <script src="Javascript2.js"></script>
+</head>
+
+<body>
+
+  <aside>
+    <h1>NTPriest.Galax</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="https://github.com/NTPriest" target="_blank">Repositories</a>
+      <div class="dropdown">
+      <div class="dropbtn" onclick="toggleDropdown()">Network Tools ▼</div>
+      <div class="dropdown-content-panel" id="dropdownContent">
+        <div class="dropdown-section">
+          <span class="categories"><b>Calculators:~</b></span>
+          <a href="ipcalc.html">IP Calculator</a>
+          <a href="LGC.html">Lag & Jitter</a>
+          <a href="download.html">Download Time Estimator - ETA</a>
+        </div>
+        <div class="dropdown-section">
+          <span class="categories">Connectivity:~</span>
+          <a href="RQL.html">Reverse Square Law</a>
+        </div>
+        <div class="dropdown-section">
+          <span class="categories">Cybersecurity:~</span>
+          <a href="notYet.html">Password Strength</a>
+        </div>
+      </div>
+    </div>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="goals.html">Goals</a>
+      <a class="active" href="NetDiagIdea.html">Network Diagram Idea</a>
+    </nav>
+  </aside>
+
+  <main>
+    <h2 class="section-title">Welcome to My NDI</h2>
+    <p style="margin-bottom: 2rem;">
+        If you're here, that means you're into networking just like me. This is my personal collection of network diagrams, ideas, and lab setups built from scratch using <strong>draw.io</strong> — for learning, sharing, and showcasing. Feel free to explore!
+        <br><br>
+        Got questions or want the full documentation? DM me on Discord or message me on GitHub.
+    </p>
+
+    <div class="title">
+        <div class="Image">
+            <h2 class="emph"><u>SOHO #1</u></h2><br>
+            <h3>Proof-of-Concept (PoC) Visual:</h3>
+            <img alt="SOHO1_NDI" src="NetworkIdeas/SOHO1/PoCNetworkIdea-Work_4U.svg">
+            <br><br>
+            <h3>Physical Diagram:</h3>
+            <img alt="SOHO1_NDI" src="NetworkIdeas/SOHO1/Physical_Work4U.svg">
+        </div>
+        <div class="Description">
+            <br>
+            <h3><span class="emph"> Description:</span></h3>
+            <p>
+            This is a small office/home office (SOHO) lab network built with proper segmentation in mind.
+            It includes VLAN-tagged trunk uplinks, port security per access switch, no native VLANs for better security, and a firewall running pfSense - with opn_vpn.
+            Devices like IoT, CCTV, and consoles are isolated appropriately to reduce risk and improve control.
+            </p><br>
+            <h4>Key Concepts:</h4>
+            <ul>
+            <li><span class="emph">VLANs:</span> Properly tagged traffic separation.</li>
+            <li><span class="emph">Trunk & Access</span> port logic (802.1Q).</li>
+            <li>No <span class="emph"> native VLAN</span> to prevent leaks.</li>
+            <li>Basic<span class="emph"> Port Security</span> (per-port max device count).</li>
+            <li><span class="emph">pfSense</span> NIC directly on choke point.</li>
+            </ul>
+            <p>
+            Entire diagram created manually in <strong>draw.io</strong>. This setup is part of my ongoing lab/portfolio series: <em>Network Diagram Ideas (NDI)</em>.
+            </p>
+        </div>
+    </div>
+
+    <p style="margin-top: 2rem;" class="emph">Still working on this site — don’t be surprised if a few links don’t work yet!</p>
+
+    <footer>
+      © <span id="year"></span> NTPriest. All rights reserved. Visit <a href="https://github.com/NTPriest" target="_blank">GitHub</a>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
