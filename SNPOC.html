@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NTPriest – Tech Space</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CorpyStyle.css">
+  <script src="Javascript2.js"></script>
+</head>
+
+<body>
+
+  <aside>
+    <h1>NTPriest.Galax</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="https://github.com/NTPriest" target="_blank">Repositories</a>
+      <div class="dropdown">
+      <div class="dropbtn" onclick="toggleDropdown()">Network Tools ▼</div>
+      <div class="dropdown-content-panel" id="dropdownContent">
+        <div class="dropdown-section">
+          <span class="categories"><b>Calculators:~</b></span>
+          <a href="ipcalc.html">IP Calculator</a>
+          <a href="LGC.html">Lag & Jitter</a>
+          <a href="download.html">Download Time Estimator - ETA</a>
+        </div>
+        <div class="dropdown-section">
+          <span class="categories">Connectivity:~</span>
+          <a href="RQL.html">Reverse Square Law</a>
+        </div>
+        <div class="dropdown-section">
+          <span class="categories">Cybersecurity:~</span>
+          <a href="notYet.html">Password Strength</a>
+        </div>
+      </div>
+    </div>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+      <a href="goals.html">Goals</a>
+      <a class="active" href="NetDiagIdea.html">Network Diagram Idea</a>
+      <a class="active" href="SNPOC.html">Sanctu Net Concept</a>
+    </nav>
+  </aside>
+
+  <main>
+    <h2 class="section-title">About <span class="emph">Sanctu_Net</span></h2>
+<p style="margin-bottom: 2rem;">
+    <strong>Sanctu_Net</strong> is a long-term, privacy-oriented mesh homelab project designed around digital sovereignty, decentralized routing, and network self-healing.
+    It aims to be a testbed for sovereign networking ideas — running entirely on open protocols and manual configuration, for those who want full-stack control.
+</p>
+
+<div class="title">
+    <div class="card">
+        <div class="Image">
+            <h2 class="emph"><u>PoC Architecture</u></h2><br>
+            <h3>Concept Overview:</h3>
+            <img alt="SanctuNet Diagram" src="NetworkIdeas/SanctuNet/PoC_Concept.svg">
+            <br><br>
+            <h3>Layered Breakdown:</h3>
+            <img alt="SanctuNet Layers" src="NetworkIdeas/SanctuNet/Layered_Topology.svg">
+        </div>
+
+        <div class="Description">
+            <br>
+            <h3><span class="emph">Core Ideas:</span></h3>
+            <ul>
+                <li><span class="emph">Mesh-style Routing:</span> Nodes can dynamically act as clients or relays ("Czars") in a decentralized overlay.</li>
+                <li><span class="emph">CarouselSW:</span> Rotating routing logic that refreshes routes periodically to resist profiling.</li>
+                <li><span class="emph">Blockchain-based Auth:</span> Lightweight, file-based identity layer for node authentication.</li>
+                <li><span class="emph">Tor/ICMP Failover:</span> Optional hidden service routing fallback when WAN is unstable.</li>
+            </ul>
+            <br>
+            <p>
+                Each component is tested in a VirtualBox LAN environment first, using a mix of Bash, Lua, and OpenVPN/WireGuard scripts.
+                The end goal is a WAN-ready sovereign networking setup with full node control and no external dependencies.
+            </p>
+            <br>
+            <h4>Status Checklist (LAN/WAN):</h4>
+            <ul>
+                <li>Auto script Ping & Route- (LAN) : <strong>[<span class="greencheck">&check;</span>]</strong></li>
+                    <dd><code>healCheck.lua</code></dd>
+                <li>Forwarding Packets thru IPTABLES- (LAN):  <strong>[<span class="greencheck">&check;</span>]</strong></li>
+                <li>Tested on BV environment- (LAN):  <strong>[<span class="greencheck">&check;</span>]</strong></li>
+                <li>Client ↔ Czar logic: <strong>[ ]</strong></li>
+                <li>Manual routing via Matrix/IRC ops: <strong>[ ]</strong></li>
+                <li>Tor fallback & ICMP-based failover: <strong>[ ]</strong></li>
+                <li>OpenVPN/WireGuard bridge: <strong>[ ]</strong></li>
+                <li>Tested on parts of WAN: <strong>[ ]</strong></li>
+            </ul><br>
+            <h2 class="emph"><u>Genesis Gallery:</u></h2><br>
+            <p>
+                <u>Lua script ping & Route (still..LAN):</u>
+                <br>
+                <br>
+            </p>
+            <img alt="SanctuNet Layers" src="NetworkIdeas/SanctuNetWalk/RelayCzar.png">
+            <p>
+                This PoC is part of my long-term homelab work in ethical, resilient, and sovereign networks — nicknamed <strong>Sanctu_Net</strong>.
+            </p>
+        </div>
+    </div>
+</div>
+<p style="margin-top: 2rem;" class="emph">⚠️ Still in testing phase. If you're into mesh lab design, let's connect on GitHub or Discord!</p>
+
+    <p style="margin-top: 2rem;" class="emph">Still working on this site — don’t be surprised if a few links don’t work yet!</p>
+
+    <footer>
+      © <span id="year"></span> NTPriest. All rights reserved. Visit <a href="https://github.com/NTPriest" target="_blank">GitHub</a>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

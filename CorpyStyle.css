@@ -65,6 +65,7 @@ main {
     gap: 2rem;
 }
 
+
 .card {
     background-color: var(--card);
     padding: 1.5rem;
@@ -87,6 +88,7 @@ main {
     font-size: 0.95rem;
     color: #c9d1d9;
 }
+
 
 .emph {
     color: var(--accent);
@@ -338,3 +340,20 @@ a:hover {
 .greencheck{
   color: rgb(10, 165, 10);
 }
+
+.horizonLine {
+  height: 3px;
+  background-color: #00cccc;
+  width: 100%;
+  margin: 1rem 0;
+  box-shadow: 0 0 10px #00cccc;
+}
+
+.center-img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+
