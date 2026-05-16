@@ -133,6 +133,9 @@ main {
   margin: 10px 0;
 }
 
+.posts-text{
+  color: #FFCC00; 
+}
 
 footer {
     text-align: center;
