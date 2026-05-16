@@ -95,6 +95,45 @@ main {
     font-weight: 600;
 }
 
+.posts {
+  color: #FFCC00;
+  margin: 0;
+  padding: 0;
+  list-style-type: none; 
+}
+
+.posts li {
+  color: #FFCC00;   
+  margin: 6px 0;
+  font-size: 1rem;
+}
+
+.posts ul li {
+  color: #FFAA00;
+  margin-left: 10px;         
+  font-size: 0.9rem; 
+  opacity: 0.8;      
+}
+
+.posts, .posts ul {
+  list-style-type: none;
+  padding: 0;           
+  margin: 0;
+  width: 100%;          
+}
+
+.post-title.mainer {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.post-title {
+  color: #ffffff;
+  margin: 10px 0;
+}
+
+
 footer {
     text-align: center;
     font-size: 0.8rem;

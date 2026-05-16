@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Strona w budowie – NTPriest</title>
+  <title>NTPriest</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -59,13 +59,18 @@
 </head>
 <body>
     <div class="card">
-        <h1>🔧 NTPriest Under Construction</h1>
+        <h1>NTPriest Under Construction</h1>
         <p>This site is currently under construction.<br> Come back later when the ritual is complete.</p>
         <br><img src="wizard-dance.gif">
     </div>
 
-  <footer>
-    &copy; 2025 NTPriest. All rights reserved.
-  </footer>
+    <footer>
+      © <span id="year"></span> NTPriest. All rights reserved. Visit <a href="https://github.com/NTPriest" target="_blank">GitHub</a>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
