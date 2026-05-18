@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Download ETA - NTPriest</title>
+  <title>About - NTPriest</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="CorpyStyle.css" />
   <script src="Javascript2.js"></script>
@@ -22,7 +22,7 @@
             <span class="categories"><b>Calculators:~</b></span>
             <a href="ipcalc.html">IP Calculator</a>
             <a href="LGC.html">Lag & Jitter</a>
-            <a class="active" href="download.html">Download ETA</a>
+            <a href="download.html">Download ETA</a>
           </div>
           <div class="dropdown-section">
             <span class="categories">Connectivity:~</span>
@@ -36,28 +36,37 @@
       </div>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a class="active" href="goals.html">Goals</a>
+      <a href="goals.html">Goals</a>
       <a href="postsPage.html">Posts/Tutorials</a>
-
-       <!--
-        <a class="active" href="NetDiagIdea.html">Network Diagram Idea</a>
-        <a class="active" href="SNPOC.html">Sanctu Net Concept</a>
-      -->
+      
     </nav>
   </aside>
 
   <main>
-    <h2 class="section-title">Download ETA</h2>
-    <p class="emph">Estimate the time to download a file given its size and your network speed.</p>
+      <br>
+    <section class="card-ip">
 
-    <div class="card-ip">
-      <label for="fileSize">File Size (MB):</label>
-      <input type="number" id="fileSize" placeholder="e.g. 1500" step="0.01" min="0">
-      <label for="downloadSpeed">Download Speed (Mbps):</label>
-      <input type="number" id="downloadSpeed" placeholder="e.g. 100" step="0.01" min="0">
-      <button onclick="calculateETA()">Calculate ETA</button>
-      <pre id="etaOutput"></pre>
-    </div>
+      <h2 class="post-title mainer">kitty</h2>
+      <p>Many people starting with ricing don't know how to properly -or at least good- configure WM.<br> We'll use Kitty as main terminal
+         because it have interesting feature like:
+         <br><br>
+        <ul>
+          <li>supports terminal image preview:<pre><code>kitty icat</code></pre></li> 
+          <br>
+          <li>It uses GPU - so you know its good (~ chaotic barbarian reference)</li>
+          <li>smooth performance</li>
+          <li>Easy to configure</li>
+          <li>And so on ...</li>
+        </ul>
+      </p>
+      <br>
+      <h3>First steps:</h3>
+        <p>installing kitty:</p>
+        <br>
+        <span>Ubuntu/Debian:</span>
+        <pre><code>sudo apt install kitty</code></pre>
+
+    </section>
 
     <footer>
       © <span id="year"></span> NTPriest. All rights reserved. Visit <a href="https://github.com/NTPriest" target="_blank">GitHub</a>

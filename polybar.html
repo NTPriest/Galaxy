@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - NTPriest</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CorpyStyle.css" />
+  <script src="Javascript2.js"></script>
+</head>
+
+<body>
+  <aside>
+    <h1>NTPriest.Galax</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="https://github.com/NTPriest" target="_blank">Repositories</a>
+      <div class="dropdown">
+        <div class="dropbtn" onclick="toggleDropdown()">Network Tools ▼</div>
+        <div class="dropdown-content-panel" id="dropdownContent">
+          <div class="dropdown-section">
+            <span class="categories"><b>Calculators:~</b></span>
+            <a href="ipcalc.html">IP Calculator</a>
+            <a href="LGC.html">Lag & Jitter</a>
+            <a href="download.html">Download ETA</a>
+          </div>
+          <div class="dropdown-section">
+            <span class="categories">Connectivity:~</span>
+            <a href="RQL.html">Reverse Square Law</a>
+          </div>
+          <div class="dropdown-section">
+            <span class="categories">Cybersecurity:~</span>
+            <a href="notYet.html">Password Strength</a>
+          </div>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="goals.html">Goals</a>
+      <a href="postsPage.html">Posts/Tutorials</a>
+      
+    </nav>
+  </aside>
+
+  <main>
+      <br>
+<section class="card-ip">
+  <h2 class="post-title mainer">Polybar</h2>
+  
+  <p class="lead-text">
+    Polybar works great with Xfce and -currently chosen- i3. So let's get started.
+  </p>
+
+  <div class="tutorial-content">
+    <h3>First steps:</h3>
+    
+    <div class="step">
+      <h4>1. Installing Polybar</h4>
+      <p class="os-distro">Ubuntu / Debian:</p>
+      <pre class="coder"><code>sudo apt install polybar</code></pre>
+    </div>
+
+    <div class="step">
+      <h4>How does it work?</h4>
+      <p>
+Polybar requires a custom shell script to run. To launch it automatically on startup, you just need to add this script to your i3 configuration.      </p>
+
+      <div class="code-block-wrapper">
+        <span class="file-name">launch.sh</span>
+        <pre class="coder"><code><span class="code-comment">#!/usr/bin/env bash</span>
+
+<span class="code-comment"># Close all polybars first to prevent duplication</span>
+polybar-msg cmd quit 2>/dev/null
+killall -q polybar
+
+<span class="code-comment"># Wait for them to close</span>
+while pgrep -x polybar >/dev/null; do sleep 0.2; done
+sleep 1
+
+<span class="code-comment"># Creating Logs</span>
+echo "---" | tee -a /tmp/polybar-mybar.log 
+
+<span class="code-comment"># If you have 2 bars:</span>
+<span class="code-comment"># echo "---" | tee -a /tmp/polybar-mybar.log /tmp/polybar-bottom.log</span>
+
+<span class="code-comment"># Activate Top bar</span>
+polybar mybar 2>&1 | tee -a /tmp/polybar-mybar.log & disown
+
+<span class="code-comment"># If you want to activate Bottom bar</span>
+<span class="code-comment">polybar bottom 2>&1 | tee -a /tmp/polybar-bottom.log & disown</span>
+
+echo "Bars launched..."</code></pre>
+      </div>
+      <p>I'll explain what <code>polybar bottom </code>[...] is all about later.</p>
+      <br><br>
+      <p>
+        If you are using i3, open your config file (<code>~/.config/i3/config</code>) and add the following line:
+      </p>
+      
+      <pre><code>exec --no-startup-id $HOME/.config/polybar/launch.sh</code></pre>
+      
+      <p class="note">
+        <strong>Note:</strong> This command executes the script on startup. The <code>--no-startup-id</code> flag disables startup-notification support for this particular command, preventing a spinning loading cursor.
+      </p>
+    </div>
+    <p> Refresh your i3 ( <i>Ctrl+Shit+R</i> ) And Voila! you have very simple status bar. Let's go customize it.</p>
+    <br>
+    <div class="step">
+      <h3>2. Configuration</h3>
+<p>Now that Polybar is installed and running, we have to answer one key question: <em><b>"How do I want it to look?"</b></em>
+  <br>
+  If you already have <b>an</b> idea, that's good.
+  In accordance with its structure, <b>it consists of</b>:
+  <br><br>
+  <ul>
+    <li>[colors] - palette definitions</li>
+    <li>[bar/Name] - bar layout configuration</li>
+    <li>[module/Name] - modules to display on Polybar</li>
+  </ul>
+  <pre class="coder"><code>[colors]
+background = #383C3D
+background-alt = #373B41
+foreground = #BFC0BF
+...</code></pre>
+  <p>In that <b>section</b>, you provide <b>the color palette</b>, and you can name <b>the</b> variables whatever you like.</p>
+</p>
+<br>
+<pre class="coder"><code>[bar/mybar]
+width = 100%
+height = 20pt
+radius = 6
+...</code></pre>
+<p>This determines <b>the properties of the bar</b> you want to be displayed<b>, such as</b> <code>border-X</code> <b>or</b> <code>tray-X</code>. You can change the name <code>"mybar"</code> to <b>whatever you prefer</b>.</p>
+    
+    
+    </div>
+  </div>
+</section>
+
+    <footer>
+      © <span id="year"></span> NTPriest. All rights reserved. Visit <a href="https://github.com/NTPriest" target="_blank">GitHub</a>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
